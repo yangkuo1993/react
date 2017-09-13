@@ -4,10 +4,10 @@ function FormatName(user) {
   return user.firstName + ' ' + user.lastName
 }
 
-const user = {
-  firstName: '这真是',
-  lastName: '牛逼'
-}
+// const user = {
+//   firstName: '这真是',
+//   lastName: '牛逼'
+// }
 function getGreeting(user) {
   if (user) {
     return <h1>Hello, {FormatName(user)}!</h1>;
