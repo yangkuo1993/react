@@ -5,6 +5,7 @@ import Click from './component/demo2/index'
 import Welcome from './component/demo3/demo3'
 import Comment from './component/demo4/demo4'
 import Clock from './component/demo5/demo5'
+import ActionLink from './component/demo6/demo6'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -27,6 +28,7 @@ class App extends Component {
               text={comment.text}
               author={comment.author} />
               <Clock></Clock>
+              <ActionLink></ActionLink>
           </div>
         );
     }
