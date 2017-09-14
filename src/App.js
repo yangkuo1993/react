@@ -8,6 +8,8 @@ import Clock from './component/demo5/demo5'
 import ActionLink from './component/demo6/demo6'
 import Toggle from './component/demo7/demo7'
 import LoginControl from './component/demo8/demo8'
+import Mailbox from './component/demo9/demo9'
+import Page from './component/demo10/demo10'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -16,6 +18,7 @@ const comment = {
     avatarUrl: 'http://placekitten.com/g/64/64'
   }
 };
+const messages = ['React', 'Re: React', 'Re:Re: React'];
 class App extends Component {
     render() {
         return (
@@ -33,6 +36,8 @@ class App extends Component {
               <ActionLink></ActionLink>
               <Toggle></Toggle>
               <LoginControl></LoginControl>
+              <Mailbox unreadMessage={messages}></Mailbox>
+              <Page></Page>
           </div>
         );
     }
