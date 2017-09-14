@@ -10,6 +10,7 @@ import Toggle from './component/demo7/demo7'
 import LoginControl from './component/demo8/demo8'
 import Mailbox from './component/demo9/demo9'
 import Page from './component/demo10/demo10'
+import NumberList from './component/demo11/demo11'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -19,6 +20,7 @@ const comment = {
   }
 };
 const messages = ['React', 'Re: React', 'Re:Re: React'];
+const numbers = [1, 2, 3, 4, 5];
 class App extends Component {
     render() {
         return (
@@ -38,6 +40,7 @@ class App extends Component {
               <LoginControl></LoginControl>
               <Mailbox unreadMessage={messages}></Mailbox>
               <Page></Page>
+              <NumberList numbers={numbers}></NumberList>
           </div>
         );
     }
