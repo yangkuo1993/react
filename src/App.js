@@ -20,6 +20,7 @@ import WelcomeDialog from './component/demo19/demo19'
 import AppOne from './component/demo20/demo20'
 import SignUpDialog from './component/demo21/demo21'
 import Price from './component/demo22/demo22'
+import Greeting from './component/demo23/demo23'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -61,6 +62,7 @@ class App extends Component {
               <hr/>
               <Price>
               </Price>
+              <Greeting name={'0'}></Greeting>
           </div>
         );
     }
