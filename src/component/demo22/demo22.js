@@ -15,7 +15,35 @@ function FormInput(props) {
         </div>
     )
 }
+function ProductRow(props) {
+    const name = props.product.stocked ? <td>{props.product.name}</td> : <td style={{color: 'red'}}>{props.product.name}</td>
+    return(
+        <tr>
+            {name}
+            <td>{props.product.price}</td>
+        </tr>
+    )
+}
+function ProductCategoryRow(props) {
+    return(
+        <tr>
+            <td colSpan={'2'}>{props.product.category}</td>
+        </tr>
+    )
+}
 function ProductTable(props) {
+    let rows = [];
+    let lastCategory = null;
+    props.products.forEach((product) => {
+        if (product.name.indexOf(props.filterText) === -1 || (!product.stocked && props.inStockOnly)) {
+            return;
+        }
+        if (product.category !== lastCategory) {
+            rows.push(<ProductCategoryRow product={product} key={product.category}/>)
+        };
+        rows.push(<ProductRow product={product} key={product.name}/>);
+        lastCategory = product.category;
+    });
     return(
         <table>
             <thead>
@@ -28,6 +56,9 @@ function ProductTable(props) {
                     </td>
                 </tr>
             </thead>
+            <tbody>
+            {rows}
+            </tbody>
         </table>
     )
 }
@@ -36,7 +67,7 @@ class Price extends Component{
         super(props);
         this.state = {
             searchValue: '',
-            onlySearch: true
+            onlySearch: false
         };
         this.searchInputChange = this.searchInputChange.bind(this);
         this.checkBoxChange = this.checkBoxChange.bind(this);
@@ -55,7 +86,7 @@ class Price extends Component{
         return(
             <div>
                 <FormInput searchValue={this.state.searchValue} searchInputChange={this.searchInputChange} inputChecked={this.state.onlySearch} checkBoxChange={this.checkBoxChange}></FormInput>
-                <ProductTable></ProductTable>
+                <ProductTable products={newArray} filterText={this.state.searchValue} inStockOnly={this.state.onlySearch}></ProductTable>
             </div>
         )
     }
