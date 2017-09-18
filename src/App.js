@@ -18,6 +18,7 @@ import Reservation from './component/demo15/demo15'
 import Calculator from './component/demo16/demo16'
 import WelcomeDialog from './component/demo19/demo19'
 import AppOne from './component/demo20/demo20'
+import SignUpDialog from './component/demo21/demo21'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -55,6 +56,7 @@ class App extends Component {
               <Calculator></Calculator>
               <WelcomeDialog></WelcomeDialog>
               <AppOne></AppOne>
+              <SignUpDialog></SignUpDialog>
           </div>
         );
     }
