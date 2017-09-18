@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import TemperatureInput from '../demo17/demo17'
 function BoilingVerdict(props) {
     if (props.celsius > 100) {
         return <div>水会烧开</div>;
@@ -22,13 +23,8 @@ class Calculator extends Component{
         const temperature = this.state.temperature
         return(
             <div>
-                <fieldset>
-                    <legend>
-                        输入一个摄氏温度
-                    </legend>
-                    <input type="text" value={this.state.temperature} onChange={this.handleChange}/>
-                    <BoilingVerdict celsius={parseFloat(temperature)}></BoilingVerdict>
-                </fieldset>
+                <TemperatureInput scale="c"></TemperatureInput>
+                <TemperatureInput scale="f"></TemperatureInput>
             </div>
         )
     }
