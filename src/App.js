@@ -16,6 +16,7 @@ import EssayForm from './component/demo13/demo13'
 import FlavorForm from './component/demo14/demo14'
 import Reservation from './component/demo15/demo15'
 import Calculator from './component/demo16/demo16'
+import WelcomeDialog from './component/demo19/demo19'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -51,6 +52,7 @@ class App extends Component {
               <FlavorForm></FlavorForm>
               <Reservation></Reservation>
               <Calculator></Calculator>
+              <WelcomeDialog></WelcomeDialog>
           </div>
         );
     }
