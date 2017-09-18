@@ -11,6 +11,7 @@ import LoginControl from './component/demo8/demo8'
 import Mailbox from './component/demo9/demo9'
 import Page from './component/demo10/demo10'
 import NumberList from './component/demo11/demo11'
+import NameForm from './component/demo12/demo12'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -41,6 +42,7 @@ class App extends Component {
               <Mailbox unreadMessage={messages}></Mailbox>
               <Page></Page>
               <NumberList numbers={numbers}></NumberList>
+              <NameForm></NameForm>
           </div>
         );
     }
