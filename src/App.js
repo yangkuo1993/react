@@ -13,6 +13,7 @@ import Page from './component/demo10/demo10'
 import NumberList from './component/demo11/demo11'
 import NameForm from './component/demo12/demo12'
 import EssayForm from './component/demo13/demo13'
+import FlavorForm from './component/demo14/demo14'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -45,6 +46,7 @@ class App extends Component {
               <NumberList numbers={numbers}></NumberList>
               <NameForm></NameForm>
               <EssayForm></EssayForm>
+              <FlavorForm></FlavorForm>
           </div>
         );
     }
