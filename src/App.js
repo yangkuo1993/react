@@ -19,6 +19,7 @@ import Calculator from './component/demo16/demo16'
 import WelcomeDialog from './component/demo19/demo19'
 import AppOne from './component/demo20/demo20'
 import SignUpDialog from './component/demo21/demo21'
+import Price from './component/demo22/demo22'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -57,6 +58,9 @@ class App extends Component {
               <WelcomeDialog></WelcomeDialog>
               <AppOne></AppOne>
               <SignUpDialog></SignUpDialog>
+              <hr/>
+              <Price>
+              </Price>
           </div>
         );
     }
