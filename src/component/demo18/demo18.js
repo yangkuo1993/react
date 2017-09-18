@@ -1,4 +1,3 @@
-import React, {Component} from 'react'
 function toCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5 / 9;
 }
