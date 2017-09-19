@@ -21,6 +21,10 @@ import AppOne from './component/demo20/demo20'
 import SignUpDialog from './component/demo21/demo21'
 import Price from './component/demo22/demo22'
 import Greeting from './component/demo23/demo23'
+import AutoFocusTextInput from './component/demo24/demo24'
+import CustomTextInput from './component/demo25/demo25'
+import GrandParent from './component/demo26/demo26'
+import NameFormOne from './component/demo27/demo27'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -63,6 +67,10 @@ class App extends Component {
               <Price>
               </Price>
               <Greeting name={'0'}></Greeting>
+              <AutoFocusTextInput></AutoFocusTextInput>
+              <CustomTextInput></CustomTextInput>
+              <GrandParent></GrandParent>
+              <NameFormOne></NameFormOne>
           </div>
         );
     }
