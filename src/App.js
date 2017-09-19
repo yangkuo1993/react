@@ -25,6 +25,8 @@ import AutoFocusTextInput from './component/demo24/demo24'
 import CustomTextInput from './component/demo25/demo25'
 import GrandParent from './component/demo26/demo26'
 import NameFormOne from './component/demo27/demo27'
+import CounterButton from './component/demo28/demo28'
+import WordAdder from './component/demo29/demo29'
 const comment = {
   date: new Date(),
   text: 'I hope you enjoy learning React!',
@@ -71,6 +73,8 @@ class App extends Component {
               <CustomTextInput></CustomTextInput>
               <GrandParent></GrandParent>
               <NameFormOne></NameFormOne>
+              <CounterButton></CounterButton>
+              <WordAdder></WordAdder>
           </div>
         );
     }
